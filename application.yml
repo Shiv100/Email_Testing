@@ -1,0 +1,56 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: mail-server
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  main:
+    allow-bean-definition-overriding: true
+
+# Remove spring.mail (Gmail SMTP) section
+
+sendgrid:
+  api-key: ${SENDGRID_API_KEY:YourSendGridAPIKey}
+  sender: avairai.pvt.ltd@gmail.com 
+
+imap:
+  host: imap.gmail.com
+  port: 993
+  username: avairai.pvt.ltd@gmail.com
+  password: lrha lhmm ehnx awwu
+  store: imaps
+
+tracking:
+  base-url: ${TRACKING_BASE_URL:http://localhost:8080}
+  reply-check-interval: 60000
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    org.apache.http: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true

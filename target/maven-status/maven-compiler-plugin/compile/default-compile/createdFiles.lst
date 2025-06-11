@@ -1,0 +1,11 @@
+com\example\demo\ReportController.class
+com\example\demo\SendGridConfig.class
+com\example\demo\SecurityConfig.class
+com\example\demo\MailServerApplication.class
+com\example\demo\EmailService.class
+com\example\demo\TrackingService.class
+com\example\demo\TrackingController.class
+com\example\demo\BounceTrackingService.class
+com\example\demo\EmailTracking.class
+com\example\demo\EmailRequest.class
+com\example\demo\EmailController.class
