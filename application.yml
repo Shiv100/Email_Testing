@@ -34,7 +34,7 @@ imap:
   store: imaps
 
 tracking:
-  base-url: ${TRACKING_BASE_URL:http://localhost:8080}
+  base-url: ${TRACKING_BASE_URL:}
   reply-check-interval: 60000
 
 logging:
